@@ -1,0 +1,45 @@
+'''def complete(request):
+    if request.method == 'POST':
+        form = MyModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.complete(request, 'Data saved successfully')  # Display a success message
+            return redirect('complete')  # Redirect to the success page
+    else:
+        form = MyModelForm()
+
+    return render(request, 'select_options.html', {'form': form})'''
+    if recipient_email:
+    subject = "Testing mail"
+    message = "This is a test email"
+    from_email = "laqubharoon@gmail.com"
+
+    # Send the email to the user's provided email address
+    send_mail(subject, message, from_email, [recipient_email], fail_silently=False)
+
+    return HttpResponse("Email sent successfully!")
+else:
+    return HttpResponse("Invalid email address")
+
+
+
+
+
+      #from django import forms
+      #from .models import 
+      
+      '''class MyModelForm(forms.ModelForm):
+          class Meta:
+              model = Selection
+              fields = ['first_choice', 'second_choice']'''
+      '''class MyModelForm(forms.ModelForm):
+          class Meta:
+              model = success_page
+              fields = ['area','email','address','phone','date']'''
+      
+      #class success_page(forms,form):
+       #   area= forms.CharField(label ="area",required=False widget=forms.TextInput(attrs={'class':"form-control"}))
+        #  email= forms.CharField(label ="recipient_email",required=False widget=forms.TextInput(attrs={'class':"form-control"}))
+         # address= forms.CharField(label ="address",required=False widget=forms.TextInput(attrs={'class':"form-control"}))
+          #phone= forms.CharField(label ="phone",required=False widget=forms.TextInput(attrs={'class':"form-control"}))
+         
